@@ -1040,7 +1040,7 @@ class Filter(object):
                         continue
                     # still here, so match was successful => add to log list
                     id_ = ethereum.utils.sha3rlp(log)
-                    assert id_ not in self._logs
+                    #assert id_ not in self._logs
                     tx = block.get_transaction(r_idx)
                     r = dict(log=log, log_idx=l_idx, block=block, txhash=tx.hash, tx_idx=r_idx)
                     logger.debug('FOUND LOG', id=id_.encode('hex'))
